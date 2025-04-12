@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AgroPal - Irrigation Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/styles/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ </head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <%# <img src="https://via.placeholder.com/50x50" alt="AgroPal Logo"> %>
+                    <span>AgroPal</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#technology">Technology</a></li>
+                    <li><a href="/#benefits">Benefits</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+                <div class="cta-button">
+                    <a href="/" class="btn">Go To Home</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  <div class="container">
+    <div class="form-card mx-auto mt-4" style="max-width: 900px;">
+      <h2 class="text-center mb-4 text-success">💧 Predict Required Irrigation (mm)</h2>
+      <form action="/predict" method="POST" class="row g-4">
+        <% const fields = [
+          { name: 'meanTemp', label: 'Mean Temperature (°C)' },
+          { name: 'maxTemp', label: 'Max Temperature (°C)' },
+          { name: 'minTemp', label: 'Min Temperature (°C)' },
+          { name: 'humidity', label: 'Humidity (%)' },
+          { name: 'windSpeed', label: 'Wind Speed (m/s)' },
+          { name: 'pressure', label: 'Pressure (kPa)' },
+          { name: 'radiation', label: 'Net Radiation (MJ/m²/day)' },
+          { name: 'dayOfYear', label: 'Day of Year (1-365)' }
+        ]; %>
+
+        <% fields.forEach(field => { %>
+          <div class="col-md-6">
+            <label class="form-label"><%= field.label %></label>
+            <input type="number" name="<%= field.name %>" class="form-control" required step="any" placeholder="Enter <%= field.label.toLowerCase() %>">
+          </div>
+        <% }) %>
+
+        <div class="col-md-4">
+          <label class="form-label">Crop Type</label>
+          <select name="cropType" class="form-select" required>
+            <option value="wheat">🌾 Wheat</option>
+            <option value="rice">🍚 Rice</option>
+            <option value="maize">🌽 Maize</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Growth Stage</label>
+          <select name="growthStage" class="form-select" required>
+            <option value="early">🌱 Early</option>
+            <option value="mid">🌿 Mid</option>
+            <option value="late">🍂 Late</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Irrigation Type</label>
+          <select name="irrigationType" class="form-select" required>
+            <option value="drip">💧 Drip</option>
+            <option value="sprinkler">🚿 Sprinkler</option>
+            <option value="surface">🌊 Surface</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-success w-100 fs-5 py-2">🚀 Predict Irrigation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

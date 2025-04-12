@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroPal - Smart Farming Companion</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    
+  <%- include("./includes/navbar.ejs") %>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Revolutionizing Agriculture with Smart Technology</h1>
+                <p>AgroPal integrates IoT and Machine Learning to optimize irrigation, improve crop yields, and make farming sustainable.</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn primary">Get Started</a>
+                    <a href="#features" class="btn secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Smart Farming Illustration">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Smart Irrigation</h3>
+                    <p>Automated watering based on real-time soil moisture and weather data, reducing water waste by 30-50%.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Crop Prediction</h3>
+                    <p>ML algorithms analyze historical data to predict future crop yields and optimize planting strategies.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Disease Detection</h3>
+                    <p>AI-powered image processing to detect diseases & pests early, providing timely warnings to farmers.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Activity Reminders</h3>
+                    <p>Automated alerts for planting, fertilizing, and harvesting based on optimal timing.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Fertilizer Optimization</h3>
+                    <p>Recommends the right type and amount of fertilizers for optimal growth and soil health.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Access</h3>
+                    <p>Monitor and control your farm from anywhere with our optional mobile application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2>Our Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/100x100" alt="IoT">
+                    <h3>IoT Sensors</h3>
+                    <p>Real-time monitoring of soil moisture, temperature, and humidity.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/100x100" alt="Machine Learning">
+                    <h3>Machine Learning</h3>
+                    <p>Predictive analytics for irrigation scheduling and yield prediction.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/100x100" alt="Cloud">
+                    <h3>Cloud Platform</h3>
+                    <p>AWS/Google Cloud for secure data storage and processing.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="https://via.placeholder.com/100x100" alt="Mobile">
+                    <h3>Mobile Interface</h3>
+                    <p>Optional Flutter app for on-the-go farm management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Benefits for Farmers</h2>
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Reduce water wastage by 20-30% through precise irrigation</li>
+                        <li><i class="fas fa-check-circle"></i> Increase crop productivity by 15-25% with optimal conditions</li>
+                        <li><i class="fas fa-check-circle"></i> Lower operational costs by reducing labor dependency</li>
+                        <li><i class="fas fa-check-circle"></i> Prevent over-irrigation and soil degradation</li>
+                        <li><i class="fas fa-check-circle"></i> Gain technological literacy with advanced farming tools</li>
+                        <li><i class="fas fa-check-circle"></i> Adaptable to diverse farm sizes and crop types</li>
+                    </ul>
+                </div>
+                <div class="benefits-image">
+                    <img src="https://via.placeholder.com/500x350" alt="Happy Farmer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> addyouremail@freepik.com</p>
+                    <p><i class="fas fa-phone"></i> +91 620 421 838</p>
+                    <p><i class="fas fa-globe"></i> yourcompany.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/50x50" alt="AgroPal Logo">
+                    <span>AgroPal</span>
+                    <p>A Smart Farming Companion</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Updates</h3>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AgroPal. All Rights Reserved.</p>
+                <p>PRESENTED BY: AMAN GOUR – EN22CS301104 | ANANT DOSI – EN22CS301116</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
